@@ -272,6 +272,12 @@ public class LogInPage extends CineverseBase {
 	
 	
 	
+	public SignUpPage ValidateClickonSignUpButton()
+	{
+		signupbutton.click();
+		return new SignUpPage();
+	}
+	
 	
 	
 	

@@ -9,6 +9,7 @@ import com.cineverse.qa.pages.ForgotPasswordPage;
 import com.cineverse.qa.pages.HomePage;
 import com.cineverse.qa.pages.LiveTvPage;
 import com.cineverse.qa.pages.LogInPage;
+import com.cineverse.qa.pages.SignUpPage;
 
 import junit.framework.Assert;
 
@@ -17,6 +18,7 @@ public class LogInPageTest extends CineverseBase{
 	LogInPage loginpage;
 	HomePage homepage;
 	ForgotPasswordPage forgotpasswordpage;
+	SignUpPage signuppage;
 	
 	 public LogInPageTest()
 	 {
@@ -231,6 +233,15 @@ public class LogInPageTest extends CineverseBase{
 	
 	 
 	 @Test(priority=24)
+	 public void ValidateClickonSignUpButtonTest()
+	 {
+		
+		 signuppage=loginpage.ValidateClickonSignUpButton();
+	 }
+	 
+	 
+	 
+	 @Test(priority=25)
 	 public void ValidateClickOnForgotPasswordTest()
 	 {
 		forgotpasswordpage= loginpage.ValidateClickOnForgotPassword();

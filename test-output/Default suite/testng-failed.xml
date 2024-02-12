@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cineverse.qa.testcases.ForgotPasswordPageTest">
+      <class name="com.cineverse.qa.testcases.SignUpPageTest">
         <methods>
           <include name="setup"/>
+          <include name="ValidatePasswordInstrctTextIsDisplayedTest"/>
           <include name="teardown"/>
-          <include name="ValidateEmailInputFieldIsDisplayedText"/>
         </methods>
-      </class> <!-- com.cineverse.qa.testcases.ForgotPasswordPageTest -->
+      </class> <!-- com.cineverse.qa.testcases.SignUpPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

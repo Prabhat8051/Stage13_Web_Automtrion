@@ -3,6 +3,7 @@ package com.cineverse.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -31,7 +32,7 @@ public class CineverseBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\pjha\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+			
 				driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("Firefox")){	
@@ -39,9 +40,12 @@ public class CineverseBase {
 	 }
 		  driver.manage().window().maximize();
 		  driver.manage().deleteAllCookies();
-		  driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+		  //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+		//  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		  driver.get(prop.getProperty("url"));
-		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		  
 		 
 		
 		
